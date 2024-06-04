@@ -14,10 +14,12 @@ Flask starter template
 ```bash
 git clone https://github.com/ErickMwazonga/flask-starter.git
 ```
+
 ###  2. Run the setup script
 ```bash
+cd flask-starter
 chmod +x setup.sh
-./boot.sh
+./setup.sh
 ```
 
 ## Steps to Configure your application(Manually)

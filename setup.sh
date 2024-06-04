@@ -4,10 +4,8 @@
 read -p "Enter the name of your application: " APP_NAME
 
 # Rename the directory
-if [ -d "flask-starter" ]; then
-    mv flask-starter "$APP_NAME"
-    cd "$APP_NAME"
-fi
+mv flask-starter "$APP_NAME"
+cd "$APP_NAME"
 
 # Set up virtual environment
 python3 -m venv venv
