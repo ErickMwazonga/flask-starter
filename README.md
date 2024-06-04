@@ -2,6 +2,18 @@
 Flask starter template
 
 ## What is included
+
+### Features
+- [x] SQLITE Database Setup
+- [x] Modularized App Configurations
+- [x] Template Inheritance
+- [x] Blueprint Configuration
+- [x] Environment Variable Usage
+- [x] Setup file to automatically configure your application
+- [x] Basic `.gitignore` setup file
+- [x] Basic app context processor
+
+### Dependencies
 - [x] `Flask-Bootstrap` -> UI
 - [x] `Flask-Migrate` -> DB Migrations
 - [x] `Flask-Moment` -> Date & Time
@@ -32,7 +44,8 @@ git clone https://github.com/ErickMwazonga/flask-starter.git
 mv flask-starter APP_NAME && cd APP_NAME
 ```
 
-### 3. Add your environment variables folowing `.env.sample`
+### 3. Add your environment variables `.env` file following `.env.sample`
+   - Change `APP_NAME=CUSTOM APP NAME`
 
 ### 4.  Configure Virtual Environment
 ```bash
