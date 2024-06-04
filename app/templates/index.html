@@ -23,6 +23,10 @@
                         <button type="submit" class="delete-btn">X</button>
                     </form>
                 </li>
+            {% else %}
+                <li class="user-item">
+                    <span>No users available.</span>
+                </li>
             {% endfor %}
         </ul>
     </div>
