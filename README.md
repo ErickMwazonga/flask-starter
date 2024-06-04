@@ -17,8 +17,7 @@ git clone https://github.com/ErickMwazonga/flask-starter.git
 
 ###  2. Run the setup script
 ```bash
-chmod +x flask-starter/setup.sh
-./setup.sh
+chmod +x flask-starter/setup.sh && ./flask-starter/setup.sh
 ```
 
 ## Steps to Configure your application(Manually)

@@ -45,6 +45,7 @@ def delete_user():
     else:
         db.session.delete(user)
         db.session.commit()
+        session.pop('name')
         flash('User deleted successfully!', 'success')
         
     return redirect(url_for('main.index'))
