@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}{{ app_name }}{% endblock %}
+
+{% block page_content %}
+{% import "bootstrap/wtf.html" as wtf %}
+<div class="row">
+    <div class="col-md-8">
+        <div class="page-header">
+            <h1>Hello, {% if name %}{{ name }}{% else %}Stranger{% endif %}!</h1>
+            <p>The local date and time is <b>{{ moment(current_time).format('LLL') }}!</b></p> 
+        </div>
+        {{ wtf.quick_form(form) }}
+    </div>
+    <div class="col-md-4">
+        <h2>All Users</h2>
+        <ul>
+            {% for user in users %}
+                <li class="user-item">
+                    <span>{{ user.name }}</span>
+                    <form action="{{ url_for('main.delete_user') }}" method="POST">
+                        <input type="hidden" name="user_id" value="{{ user.id }}">
+                        <button type="submit" class="delete-btn">X</button>
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}
