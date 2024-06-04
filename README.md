@@ -9,14 +9,27 @@ Flask starter template
 - [x] `Flask-WTF` -> Forms
 - [x] `python-dotenv` -> Environement Variables
 
+## Steps to Configure your application(Automatically)
+###  1. Clone flask starter project
+```bash
+git clone https://github.com/ErickMwazonga/flask-starter.git
+```
+###  2. Run the setup script
+```bash
+chmod +x setup.sh
+./boot.sh
+```
 
-## Steps to Configure your application
+## Steps to Configure your application(Manually)
 
-###  1.  Clone flask boilerplate
+###  1.  Clone flask starter project
+```bash
+git clone https://github.com/ErickMwazonga/flask-starter.git
+```
 
 ###  2.  Change app to your desired name e.g. `APP_NAME`
 ```bash
-mv flask-boilerplate APP_NAME && cd APP_NAME
+mv flask-starter APP_NAME && cd APP_NAME
 ```
 
 ### 3. Add your environment variables folowing `.env.sample`
@@ -27,23 +40,22 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-### 4. Install dependencies
+### 5. Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-### 5. Edit App configurations
-To change your app configuration, update `.flaskenv` file. It will automatically resync
+### 6. Edit App configurations
+- To change your app configuration, update `.flaskenv` file. It will automatically resync
 
-### 6. Run Migrations
+### 7. Run Migrations
 ```bash
-touch db.sqlite
 flask db init
 flask db migrate -m 'Initial migration'
 flask db upgrade
 ```
 
-### 7. Run the app
+### 8. Run the app
 ```bash
 flask run
 ```
@@ -58,8 +70,7 @@ git push -u origin main
 ## Other Configurations
 ### VSCODE Setup
 1. **Exclude Files**
-
-    Text Editor -> Files -> Exclude -> Add Pattern -> add  `**/__pycache__`
+   - Text Editor -> Files -> Exclude -> Add Pattern -> add  `**/__pycache__`
 
 2. **Extenstions**
    - `ms-python.python`
